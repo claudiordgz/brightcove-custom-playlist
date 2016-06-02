@@ -1,0 +1,30 @@
+{
+  "name": "brightcove-custom-playlist",
+  "version": "0.0.1",
+  "description": "CSS and JS sources for a custom brightcove playlist bundled using Webpack",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiordgz/brightcove-custom-playlist.git"
+  },
+  "keywords": [
+    "CSS",
+    "JS",
+    "Webpack"
+  ],
+  "author": "claudiordgz",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/claudiordgz/brightcove-custom-playlist/issues"
+  },
+  "homepage": "https://github.com/claudiordgz/brightcove-custom-playlist#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "expose-loader": "^0.7.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}
