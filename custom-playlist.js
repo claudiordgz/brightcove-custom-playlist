@@ -180,13 +180,26 @@ var VideoPlaylist = function () {
         setupNavigation(playlistWrapper, playlistItems);
         function sum(a, b) { return (a + b); }
         function subs(a, b) { return (a - b); }
-        
+        if (itemsPerScroll > totalItems) {
+          beforeButton.setAttribute('data-enabled', 'false');
+          nextButton.setAttribute('data-enabled', 'false');
+        } else {
+          beforeButton.setAttribute('data-enabled', 'true');
+          nextButton.setAttribute('data-enabled', 'true');
+        }
+
         beforeButton.addEventListener('click', function (e) {
-          currentIndexedItem = navigateLeft(playlistItems, sum, currentIndexedItem, totalItems, itemsPerScroll, singleItemWidth);
+          var enabledFlag = this.getAttribute('data-enabled');
+          if(enabledFlag) {
+            currentIndexedItem = navigateLeft(playlistItems, sum, currentIndexedItem, totalItems, itemsPerScroll, singleItemWidth);
+          }
         });
         
         nextButton.addEventListener('click', function (e) {
-          currentIndexedItem = navigateRight(playlistItems, subs, currentIndexedItem, totalItems, itemsPerScroll, singleItemWidth);
+          var enabledFlag = this.getAttribute('data-enabled');
+          if(enabledFlag) {
+            currentIndexedItem = navigateRight(playlistItems, subs, currentIndexedItem, totalItems, itemsPerScroll, singleItemWidth);
+          }
         });
         
       });

@@ -19,14 +19,22 @@
     content: "";
     display: block;
     position: absolute;
-    background: url('/assets/brightcove/images/ic_navigate_before_black_18dp_2x.png') no-repeat 0 36px;
     left: 0;
     bottom: -130px;
     top: auto;
     overflow: hidden;
 }
-.bcls-before-nav:hover {
+
+.bcls-before-nav[data-enabled="true"] {
+    background: url('/assets/brightcove/images/ic_navigate_before_black_18dp_2x.png') no-repeat 0 36px;
+}
+
+.bcls-before-nav[data-enabled="true"]:hover {
     background: rgba(0,0,0, 0.4) url('/assets/brightcove/images/ic_navigate_before_black_18dp_2x.png') no-repeat 0 36px;
+}
+
+.bcls-before-nav[data-enabled="false"] {
+    background: url('/assets/brightcove/images/ic_navigate_before_gray_18dp_2x.png') no-repeat 0 36px;
 }
 
 .bcls-before-nav:active:after,
@@ -59,7 +67,6 @@
     height: 120px;
     content: "";
     display: block;
-    background: url('/assets/brightcove/images/ic_navigate_next_black_18dp_2x.png') no-repeat 0 36px;
     position: absolute;
     right: 0;
     bottom: -130px;
@@ -67,8 +74,17 @@
     overflow: hidden;
 }
 
-.bcls-next-nav:hover {
+.bcls-next-nav[data-enabled="true"] {
+    background: url('/assets/brightcove/images/ic_navigate_next_black_18dp_2x.png') no-repeat 0 36px;
+}
+
+.bcls-next-nav[data-enabled="true"]:hover {
     background: rgba(0,0,0, 0.4) url('/assets/brightcove/images/ic_navigate_next_black_18dp_2x.png') no-repeat 0 36px;
+}
+
+.bcls-next-nav[data-enabled="false"] {
+    background: url('/assets/brightcove/images/ic_navigate_next_gray_18dp_2x.png') no-repeat 0 36px;
+
 }
 
 /*style for the divs that make up the playlist items*/
